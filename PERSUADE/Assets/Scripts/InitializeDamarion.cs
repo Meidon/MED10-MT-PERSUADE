@@ -9,10 +9,12 @@ public class InitializeDamarion : MonoBehaviour
     private ChatbotDamarion bot;
     public InputField inputField;
     public Text robotOutput;
+    public bool animRespond;
 
     void Start()
     {
         bot = new ChatbotDamarion();
+        animRespond = false;
         bot.LoadBrain();
     }
 
@@ -29,8 +31,17 @@ public class InitializeDamarion : MonoBehaviour
         {
             var answer = bot.getOutput(inputField.text);
             robotOutput.text = answer;
+            animRespond = true;
             inputField.text = string.Empty;
+            StartCoroutine(wait(1));
         }
+    }
+
+    IEnumerator wait (float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        animRespond = false;
     }
 
 
