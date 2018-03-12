@@ -19,9 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4768933049150490}
+  - component: {fileID: 65507563441529702}
   m_Layer: 0
   m_Name: ChatbotDamarion
-  m_TagString: Untagged
+  m_TagString: Chatbot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2101,7 +2102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317070496173402}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4537972061277686}
@@ -2358,6 +2359,18 @@ Transform:
   m_Father: {fileID: 4156200525059442}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65507563441529702
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004184711224232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 1.75, z: 0.75}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &95878282743732488
 Animator:
   serializedVersion: 3
@@ -2366,7 +2379,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317070496173402}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: a7eb448a7c09804448a96f10b2b6d2ba, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
   m_Controller: {fileID: 9100000, guid: abfdfa02837b70346b36ba5ff7154653, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -2917,7 +2930,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: a7eb448a7c09804448a96f10b2b6d2ba, type: 3}
+  - {fileID: 2100000, guid: c5732a0aeed706245874841ec1c1dcf0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3015,7 +3028,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a7eb448a7c09804448a96f10b2b6d2ba, type: 3}
+  - {fileID: 2100000, guid: 5521259bdba0e7d468f7a7248ce65150, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3165,12 +3178,12 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386669753944162}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
