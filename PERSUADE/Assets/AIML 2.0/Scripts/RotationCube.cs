@@ -7,7 +7,8 @@ public class RotationCube : MonoBehaviour
 
 	private float ramdonTime;
 	private Vector3 rotateDir;
-	// Use this for initialization
+    public float rotationSpeed;
+
 	void Start ()
 	{
 		float x, y, z;
@@ -19,20 +20,19 @@ public class RotationCube : MonoBehaviour
 		ramdonTime = Random.Range (2, 5);
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 		ramdonTime -= Time.deltaTime * 1;
 
-		transform.Rotate(rotateDir * Time.deltaTime*2);
+		this.transform.Rotate(rotateDir * Time.deltaTime*rotationSpeed);
 
 
 		if (ramdonTime <= 0) {
 			Start ();
 		}
-	}//fecha update
+	}
 
 
 
 }
-//fecha a classe
+

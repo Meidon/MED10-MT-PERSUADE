@@ -5,7 +5,7 @@ using UnityEngine;
 public class animControls : MonoBehaviour {
 
     public Animator anim;
-    public InitializeDamarion damarion;
+    //public GameObject animObject;
 
 	void Start () {
         anim = GetComponent<Animator>();
@@ -17,12 +17,19 @@ public class animControls : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Return))
         {
             anim.SetBool("isTalking", true);
+            StartCoroutine(w(1));
         }
 
-        if(damarion.animRespond == false)
-        {
-            anim.SetBool("isTalking", false);
-        }
+        //if(animObject.GetComponent<APIAIDoorman>().animRespond == false)
+        //{
+        //    anim.SetBool("isTalking", false);
+        //}
 
 	}
+
+    IEnumerator w (float del)
+    {
+        yield return new WaitForSeconds(del);
+        anim.SetBool("isTalking", false);
+    }
 }

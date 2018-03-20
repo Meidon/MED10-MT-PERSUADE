@@ -22,21 +22,15 @@ public class Narrator : MonoBehaviour {
 
         if(robotOutput.text.Contains("Damarion"))
         {
-            output = keyword1;
+            output.Insert(0, keyword2);
             UpdateText();
         }
 
         if (robotOutput.text.Contains("Juliet"))
         {
-            if(output.Contains("Damarion"))
-            {
-                output = keyword1+"\n"+keyword2;
+                output.Insert(1,keyword2);
                 UpdateText();
-            } else
-            {
-                output = keyword2;
-                UpdateText();
-            }
+
             
         }
     }
