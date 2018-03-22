@@ -41,38 +41,9 @@ public class ApiAiModule : MonoBehaviour
         apiAiUnity = new ApiAiUnity();
         apiAiUnity.Initialize(config);
 
-        //apiAiUnity.OnError += HandleOnError;
-        //apiAiUnity.OnResult += HandleOnResult;
     }
 
-    //void HandleOnResult(object sender, AIResponseEventArgs e)
-    //{
-    //    RunInMainThread(() => {
-    //        var aiResponse = e.Response;
-    //        if (aiResponse != null)
-    //        {
-    //            Debug.Log(aiResponse.Result.ResolvedQuery);
-    //            var outText = JsonConvert.SerializeObject(aiResponse, jsonSettings);
-    //            var speechOutput = aiResponse.Result.Fulfillment.Speech;
-    //            Debug.Log(outText);
-                
-    //            answerTextField.text = speechOutput;
-                
-    //        } else
-    //        {
-    //            Debug.LogError("Response is null");
-    //        }
-    //    });
-    //}
-    
-    //void HandleOnError(object sender, AIErrorEventArgs e)
-    //{
-    //    RunInMainThread(() => {
-    //        Debug.LogException(e.Exception);
-    //        Debug.Log(e.ToString());
-    //        answerTextField.text = e.Exception.Message;
-    //    });
-    //}
+
 
     void Update()
     {
