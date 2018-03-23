@@ -11844,7 +11844,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh89528
+  m_Name: pb_Mesh85904
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -43606,6 +43606,11 @@ Prefab:
     - target: {fileID: 114776664306209912, guid: d010510a1b4c8e14db29afeaa61c0656,
         type: 2}
       propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223475735356303452, guid: d010510a1b4c8e14db29afeaa61c0656,
+        type: 2}
+      propertyPath: m_PixelPerfect
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

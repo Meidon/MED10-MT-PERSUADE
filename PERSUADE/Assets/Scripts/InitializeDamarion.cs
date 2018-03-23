@@ -33,11 +33,11 @@ public class InitializeDamarion : MonoBehaviour
             robotOutput.text = answer;
             animRespond = true;
             inputField.text = string.Empty;
-            StartCoroutine(wait(1));
+            StartCoroutine(Wait(1));
         }
     }
 
-    IEnumerator wait (float delay)
+    IEnumerator Wait (float delay)
     {
         yield return new WaitForSeconds(delay);
 

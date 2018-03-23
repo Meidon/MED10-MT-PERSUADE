@@ -17,7 +17,7 @@ public class animControls : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Return))
         {
             anim.SetBool("isTalking", true);
-            StartCoroutine(w(1));
+            StartCoroutine(W(1));
         }
 
         //if(animObject.GetComponent<APIAIDoorman>().animRespond == false)
@@ -27,7 +27,7 @@ public class animControls : MonoBehaviour {
 
 	}
 
-    IEnumerator w (float del)
+    IEnumerator W(float del)
     {
         yield return new WaitForSeconds(del);
         anim.SetBool("isTalking", false);

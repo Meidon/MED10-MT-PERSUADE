@@ -64,7 +64,7 @@ public class APIAIDoorman : MonoBehaviour
                 Debug.Log("Result: " + outText);
 
                 answerTextField.text = response.Result.Fulfillment.Speech;
-                StartCoroutine(wait(1));
+                StartCoroutine(Wait(1));
             }
             else
             {
@@ -78,7 +78,7 @@ public class APIAIDoorman : MonoBehaviour
 
     }
 
-    IEnumerator wait(float delay)
+    IEnumerator Wait(float delay)
     {
         yield return new WaitForSeconds(delay);
 

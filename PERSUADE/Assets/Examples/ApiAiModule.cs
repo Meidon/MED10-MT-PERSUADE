@@ -86,14 +86,14 @@ public class ApiAiModule : MonoBehaviour
 
             answerTextField.text = response.Result.Fulfillment.Speech;
             n.textInput = answerTextField.text;
-            StartCoroutine(wait(1));
+            StartCoroutine(Wait(1));
         } else
         {
             Debug.LogError("Response is null");
         }
 
     }
-    IEnumerator wait(float delay)
+    IEnumerator Wait(float delay)
     {
         yield return new WaitForSeconds(delay);
 
