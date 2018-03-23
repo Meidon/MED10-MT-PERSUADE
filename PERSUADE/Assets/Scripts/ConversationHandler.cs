@@ -11,14 +11,14 @@ public class ConversationHandler : MonoBehaviour {
     public bool isUIEnabled;
     public Canvas tempC;
     public bool lockCursor = true;
-    public Canvas childC;
+    public Canvas childCE;
+    public Canvas childCQ;
 
 	void Start () {
         isRoaming = true;
         isUIEnabled = false;
         PlayerCam = Camera.main;
         PlayerController = GameObject.FindGameObjectWithTag("Player");
-        childC = GetComponentInChildren<Canvas>();
 	}
 	
 	void Update () {
@@ -31,10 +31,11 @@ public class ConversationHandler : MonoBehaviour {
         if(isUIEnabled)
         {
             PlayerController.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = false;
+            //childCQ.enabled = true;
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             isRoaming = true;
             lockCursor = true;
@@ -54,10 +55,12 @@ public class ConversationHandler : MonoBehaviour {
             {
                 if(isUIEnabled == false)
                 {
-                    childC.enabled = true;
+                    childCE.enabled = true;
+                    childCQ.enabled = false;
                 } else
                 {
-                    childC.enabled = false;
+                    childCE.enabled = false;
+                    childCQ.enabled = true;
                 }
                 
                 tempC = hit.transform.gameObject.GetComponentInChildren<Canvas>();
@@ -65,7 +68,8 @@ public class ConversationHandler : MonoBehaviour {
             else
             {
                 tempC = null;
-                childC.enabled = false;
+                childCE.enabled = false;
+                childCQ.enabled = false;
             }
 
             if(tempC != null)

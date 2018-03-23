@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Chatbot
+  - Narrator
   layers:
   - Default
   - TransparentFX

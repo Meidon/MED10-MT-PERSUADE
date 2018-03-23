@@ -18,6 +18,7 @@ public class ApiAiModule : MonoBehaviour
     public Text inputTextField;
     private ApiAiUnity apiAiUnity;
     public bool animRespond;
+    public Narrator n;
 
     private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings
     { 
@@ -37,7 +38,7 @@ public class ApiAiModule : MonoBehaviour
         const string ACCESS_TOKEN = "0841d56a1f304f318d207aa46cb569cd";
         animRespond = false;
         var config = new AIConfiguration(ACCESS_TOKEN, SupportedLanguage.English);
-
+        n = GameObject.FindGameObjectWithTag("Narrator").GetComponent<Narrator>();
         apiAiUnity = new ApiAiUnity();
         apiAiUnity.Initialize(config);
 
@@ -84,6 +85,7 @@ public class ApiAiModule : MonoBehaviour
             Debug.Log("Result: " + outText);
 
             answerTextField.text = response.Result.Fulfillment.Speech;
+            n.textInput = answerTextField.text;
             StartCoroutine(wait(1));
         } else
         {
