@@ -5,38 +5,23 @@ using UnityEngine.UI;
 
 public class Narrator : MonoBehaviour {
 
-    public Text exampleText;
-    public Text robotOutput;
-    private string keyword1;
-    private string keyword2;
-    private string output;
-
-	// Use this for initialization
-	void Start () {
-        keyword1 = "Name: Damarion";
-        keyword2 = "Girlfriend: Juliet";
-	}
+    public string textInput;
+    public List<string> DataLog = new List<string>();
+    public List<string> Keywords = new List<string>();
 	
-	// Update is called once per frame
 	void Update () {
-
-        if(robotOutput.text.Contains("Damarion"))
+        for(int i = 0; i <= Keywords.Count-1; i++)
         {
-            output.Insert(0, keyword2);
-            UpdateText();
-        }
-
-        if (robotOutput.text.Contains("Juliet"))
-        {
-                output.Insert(1,keyword2);
-                UpdateText();
-
-            
+            if(textInput.Contains(Keywords[i].ToString()))
+            {
+                UpdateLog();
+            }
         }
     }
 
-    private void UpdateText()
+    private void UpdateLog()
     {
-        exampleText.text = output;
+        if(!DataLog.Contains(textInput))
+            DataLog.Add(textInput);
     }
 }
