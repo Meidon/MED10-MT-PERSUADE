@@ -10,7 +10,7 @@ public class IntroHandler : MonoBehaviour {
     public BoxCollider PortalCol;
 
 	void Start () {
-        doorman = GameObject.FindGameObjectWithTag("Chatbot").GetComponent<APIAIDoorman>();
+        doorman = GameObject.Find("ChatbotDoorman").GetComponent<APIAIDoorman>();
         gateway.enableEmission = false;
         PortalCol.enabled = false;
 	}
