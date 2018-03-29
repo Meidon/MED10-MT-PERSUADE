@@ -671,7 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970177213694640}
   - component: {fileID: 65843200373132218}
-  - component: {fileID: 114392422748174920}
+  - component: {fileID: 114981855408631308}
   m_Layer: 0
   m_Name: ChatbotCollene
   m_TagString: Chatbot
@@ -2347,7 +2347,7 @@ Animator:
   m_GameObject: {fileID: 1331239747622478}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abfdfa02837b70346b36ba5ff7154653, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114392422748174920}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2644,21 +2644,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Enter text...
---- !u!114 &114392422748174920
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1477965485096498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64fc8d12b2f0d394492ec2636dff7eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answerTextField: {fileID: 114005439857389142}
-  inputTextField: {fileID: 114647125934094480}
-  animRespond: 0
-  n: {fileID: 0}
 --- !u!114 &114424018996075256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2708,7 +2693,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114392422748174920}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2883,6 +2868,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114981855408631308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477965485096498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc3f591d00c1e94f8dcb1d55e3e03a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerTextField: {fileID: 114005439857389142}
+  inputTextField: {fileID: 114647125934094480}
+  animRespond: 0
+  n: {fileID: 0}
 --- !u!137 &137459659833950818
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2897,7 +2897,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
+  - {fileID: 2100000, guid: ad551b2816b55c24b8adb05f365bb520, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2995,7 +2995,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
+  - {fileID: 2100000, guid: 81efe1e10282cef47ad507b1bbaa2e8b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

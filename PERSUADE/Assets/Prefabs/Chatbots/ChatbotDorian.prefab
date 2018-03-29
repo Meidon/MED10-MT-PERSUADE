@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4768933049150490}
   - component: {fileID: 65507563441529702}
-  - component: {fileID: 114151775498880592}
+  - component: {fileID: 114113656780841740}
   m_Layer: 0
   m_Name: ChatbotDorian
   m_TagString: Chatbot
@@ -2438,7 +2438,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114151775498880592}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2481,7 +2481,7 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &114151775498880592
+--- !u!114 &114113656780841740
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004184711224232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64fc8d12b2f0d394492ec2636dff7eb5, type: 3}
+  m_Script: {fileID: 11500000, guid: d3b45a5d4a04831439cdd94077c33a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   answerTextField: {fileID: 114298243567744112}
@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114151775498880592}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -3043,7 +3043,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5521259bdba0e7d468f7a7248ce65150, type: 2}
+  - {fileID: 2100000, guid: 083f4886598f8aa448290ae89bc64377, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

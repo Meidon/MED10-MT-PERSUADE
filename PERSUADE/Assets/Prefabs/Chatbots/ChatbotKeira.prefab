@@ -671,7 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4970177213694640}
   - component: {fileID: 65843200373132218}
-  - component: {fileID: 114392422748174920}
+  - component: {fileID: 114021086588270762}
   m_Layer: 0
   m_Name: ChatbotKeira
   m_TagString: Chatbot
@@ -2300,8 +2300,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477965485096498}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: 9, y: -1.1, z: -59.5}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 14.1, y: 1, z: -21.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4562012794981840}
@@ -2309,7 +2309,7 @@ Transform:
   - {fileID: 4579621249148466}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!4 &4982941345670184
 Transform:
   m_ObjectHideFlags: 1
@@ -2347,7 +2347,7 @@ Animator:
   m_GameObject: {fileID: 1331239747622478}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: abfdfa02837b70346b36ba5ff7154653, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2421,6 +2421,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '...'
+--- !u!114 &114021086588270762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477965485096498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438f1880b4f0b1441939d10e8eb9c2df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerTextField: {fileID: 114005439857389142}
+  inputTextField: {fileID: 114647125934094480}
+  animRespond: 0
+  n: {fileID: 0}
 --- !u!114 &114021759578188912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2487,7 +2502,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114392422748174920}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2644,21 +2659,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Enter text...
---- !u!114 &114392422748174920
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1477965485096498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64fc8d12b2f0d394492ec2636dff7eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answerTextField: {fileID: 114005439857389142}
-  inputTextField: {fileID: 114647125934094480}
-  animRespond: 0
-  n: {fileID: 0}
 --- !u!114 &114424018996075256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2708,7 +2708,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114392422748174920}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2897,7 +2897,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
+  - {fileID: 2100000, guid: 745e414d41828754b8aeed8a2214f431, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2995,7 +2995,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
+  - {fileID: 2100000, guid: c1d3fa9fc81f75543a4efd82f65c1c80, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

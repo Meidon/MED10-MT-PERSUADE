@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4768933049150490}
   - component: {fileID: 65507563441529702}
-  - component: {fileID: 114151775498880592}
+  - component: {fileID: 114032073719253358}
   m_Layer: 0
   m_Name: ChatbotKeno
   m_TagString: Chatbot
@@ -2350,19 +2350,13 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878459432215982}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4a39fafb083e90c4db31824f8101c5ea, type: 3}
+  m_Avatar: {fileID: 9000000, guid: a7eb448a7c09804448a96f10b2b6d2ba, type: 3}
   m_Controller: {fileID: 9100000, guid: abfdfa02837b70346b36ba5ff7154653, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed by
-    Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-    'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform 'mixamorig:RightHandRing1'\n\tand
-    more ...\n\tFrom animation clip 'Idle'\n\tFrom animation clip 'Agreeing'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114012441012905266
@@ -2414,7 +2408,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114151775498880592}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2439,6 +2433,21 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!114 &114032073719253358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004184711224232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef62d782e2f2474088811280acd1acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answerTextField: {fileID: 114298243567744112}
+  inputTextField: {fileID: 114212840858931604}
+  animRespond: 0
+  n: {fileID: 0}
 --- !u!114 &114071312633807174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2457,21 +2466,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &114151775498880592
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1004184711224232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64fc8d12b2f0d394492ec2636dff7eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  answerTextField: {fileID: 114298243567744112}
-  inputTextField: {fileID: 114212840858931604}
-  animRespond: 0
-  n: {fileID: 0}
 --- !u!114 &114212840858931604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2880,7 +2874,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114151775498880592}
+      - m_Target: {fileID: 0}
         m_MethodName: SendText
         m_Mode: 1
         m_Arguments:
@@ -2907,7 +2901,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 5521259bdba0e7d468f7a7248ce65150, type: 2}
+  - {fileID: 2100000, guid: 53c8e9040b0f8194ea89aa9b89041bc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
