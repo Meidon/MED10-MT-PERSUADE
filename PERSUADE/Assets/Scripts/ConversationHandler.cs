@@ -13,14 +13,15 @@ public class ConversationHandler : MonoBehaviour {
     public bool lockCursor = true;
     public Canvas childCE;
     public Canvas childCQ;
-    public Canvas logBook;
     public List<GameObject> ChatbotCanvas = new List<GameObject>();
+    private Invector.CharacterController.vThirdPersonController playerControl;
 
 	void Start () {
         isRoaming = true;
         isUIEnabled = false;
         PlayerCam = Camera.main;
         PlayerController = GameObject.FindGameObjectWithTag("Player");
+        playerControl = PlayerController.GetComponent<Invector.CharacterController.vThirdPersonController>();
         ChatbotCanvas.AddRange(GameObject.FindGameObjectsWithTag("Chatbot"));
 	}
 	
@@ -35,6 +36,7 @@ public class ConversationHandler : MonoBehaviour {
         if(isUIEnabled)
         {
             PlayerController.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = false;
+            playerControl.input = new Vector2(0, 0);
 
         }
 
@@ -56,9 +58,9 @@ public class ConversationHandler : MonoBehaviour {
         //Debug.DrawRay(r.origin, r.direction * 10, Color.yellow);
         RaycastHit hit;
 
-        if (Physics.Raycast(r, out hit, 3))
+        if (Physics.Raycast(r, out hit, 2))
         {
-            if(hit.transform.gameObject.tag == "Chatbot")
+            if(hit.collider.transform.tag == "Chatbot")
             {
                 if(isUIEnabled == false)
                 {
@@ -70,14 +72,13 @@ public class ConversationHandler : MonoBehaviour {
                     childCQ.enabled = true;
                 }
                 
+              
                 tempC = hit.transform.gameObject.GetComponentInChildren<Canvas>();
-            }
-            else
+            } else
             {
-                StartCoroutine(delay(0.5f));
+                tempC = null;
                 childCE.enabled = false;
                 childCQ.enabled = false;
-                logBook.enabled = true;
             }
 
             if(tempC != null)
@@ -88,7 +89,6 @@ public class ConversationHandler : MonoBehaviour {
                     isRoaming = false;
                     isUIEnabled = true;
                     tempC.enabled = true;
-                    logBook.enabled = false;
                     
                 }
             }
@@ -99,10 +99,4 @@ public class ConversationHandler : MonoBehaviour {
         Cursor.visible = !lockCursor;
     }
 
-    IEnumerator delay(float delay)
-    {
-        tempC = null;
-        yield return new WaitForSeconds(delay);
-        
-    }
 }
