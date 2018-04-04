@@ -14,7 +14,7 @@ public class ConversationHandler : MonoBehaviour {
     public Canvas childCE;
     public Canvas childCQ;
     public List<GameObject> ChatbotCanvas = new List<GameObject>();
-    private Invector.CharacterController.vThirdPersonController playerControl;
+    public Invector.CharacterController.vThirdPersonController playerControl;
 
 	void Start () {
         isRoaming = true;
