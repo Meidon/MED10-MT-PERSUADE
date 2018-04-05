@@ -46,7 +46,7 @@ public class ConversationHandler : MonoBehaviour {
             lockCursor = true;
 
 
-            for (int i = 0; i < ChatbotCanvas.Count - 1; i++)
+            for (int i = 0; i < ChatbotCanvas.Count; i++)
             {
                 ChatbotCanvas[i].GetComponentInChildren<Canvas>().enabled = false;
             }

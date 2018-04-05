@@ -16,6 +16,7 @@ public class APIAIEryn : MonoBehaviour
 
     public Text answerTextField;
     public Text inputTextField;
+    public string playerTextInput;
     private ApiAiUnity apiAiUnity;
     public bool animRespond;
     public Narrator n;
@@ -72,7 +73,7 @@ public class APIAIEryn : MonoBehaviour
     public void SendText()
     {
         var text = inputTextField.text;
-
+        playerTextInput = text;
         Debug.Log(text);
 
         AIResponse response = apiAiUnity.TextRequest(text);
@@ -85,7 +86,7 @@ public class APIAIEryn : MonoBehaviour
             Debug.Log("Result: " + outText);
 
             answerTextField.text = response.Result.Fulfillment.Speech;
-            n.textInput = answerTextField.text;
+            n.textInput = "Eryn: " + answerTextField.text;
             StartCoroutine(Wait(1));
         }
         else
