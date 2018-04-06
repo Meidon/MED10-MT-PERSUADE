@@ -19,9 +19,10 @@ public class APIAIDorian : MonoBehaviour
     public string playerTextInput;
     private ApiAiUnity apiAiUnity;
     public bool animRespond;
-    public bool isSending;
+    //public bool isSending;
     public Narrator n;
     public LogSystem lS;
+    private string botName = " | Dorian: ";
 
     private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings
     {
@@ -40,7 +41,7 @@ public class APIAIDorian : MonoBehaviour
 
         const string ACCESS_TOKEN = "0841d56a1f304f318d207aa46cb569cd";
         animRespond = false;
-        isSending = false;
+        //isSending = false;
         var config = new AIConfiguration(ACCESS_TOKEN, SupportedLanguage.English);
         n = GameObject.FindGameObjectWithTag("Narrator").GetComponent<Narrator>();
         lS = FindObjectOfType<LogSystem>();
@@ -63,11 +64,11 @@ public class APIAIDorian : MonoBehaviour
             ExecuteOnMainThread.Dequeue().Invoke();
         }
 
-        if(lS.hasLogged)
-        {
-            isSending = false;
-            lS.hasLogged = false;
-        }
+        //if(lS.hasLogged)
+        //{
+        //    isSending = false;
+        //    lS.hasLogged = false;
+        //}
     }
 
     private void RunInMainThread(Action action)
@@ -86,7 +87,7 @@ public class APIAIDorian : MonoBehaviour
         var text = inputTextField.text;
         playerTextInput = text;
         Debug.Log(text);
-
+        
         AIResponse response = apiAiUnity.TextRequest(text);
 
         if (response != null)
@@ -94,7 +95,7 @@ public class APIAIDorian : MonoBehaviour
             Debug.Log("Resolved query: " + response.Result.ResolvedQuery);
             var outText = JsonConvert.SerializeObject(response, jsonSettings);
             animRespond = true;
-            isSending = true;
+            //isSending = true;
             Debug.Log("Result: " + outText);
 
             answerTextField.text = response.Result.Fulfillment.Speech;
@@ -107,7 +108,7 @@ public class APIAIDorian : MonoBehaviour
             Debug.LogError("Response is null");
            
         }
-
+        StartCoroutine(lS.Log(text + botName + answerTextField.text));
     }
     IEnumerator Wait(float delay)
     {

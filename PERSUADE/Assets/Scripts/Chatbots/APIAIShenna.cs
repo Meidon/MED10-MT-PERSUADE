@@ -19,7 +19,10 @@ public class APIAIShenna : MonoBehaviour
     public string playerTextInput;
     private ApiAiUnity apiAiUnity;
     public bool animRespond;
+    //public bool isSending;
     public Narrator n;
+    public LogSystem lS;
+    private string botName = " | Shenna: ";
 
     private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings
     {
@@ -38,8 +41,10 @@ public class APIAIShenna : MonoBehaviour
 
         const string ACCESS_TOKEN = "786ac48cbedc49b287eb97da6d53afab";
         animRespond = false;
+        //isSending = false;
         var config = new AIConfiguration(ACCESS_TOKEN, SupportedLanguage.English);
         n = GameObject.FindGameObjectWithTag("Narrator").GetComponent<Narrator>();
+        lS = FindObjectOfType<LogSystem>();
         apiAiUnity = new ApiAiUnity();
         apiAiUnity.Initialize(config);
 
@@ -75,7 +80,7 @@ public class APIAIShenna : MonoBehaviour
         var text = inputTextField.text;
         playerTextInput = text;
         Debug.Log(text);
-
+        
         AIResponse response = apiAiUnity.TextRequest(text);
 
         if (response != null)
@@ -83,6 +88,7 @@ public class APIAIShenna : MonoBehaviour
             Debug.Log("Resolved query: " + response.Result.ResolvedQuery);
             var outText = JsonConvert.SerializeObject(response, jsonSettings);
             animRespond = true;
+            //isSending = true;
             Debug.Log("Result: " + outText);
 
             answerTextField.text = response.Result.Fulfillment.Speech;
@@ -93,7 +99,7 @@ public class APIAIShenna : MonoBehaviour
         {
             Debug.LogError("Response is null");
         }
-
+        StartCoroutine(lS.Log(text + botName + answerTextField.text));
     }
     IEnumerator Wait(float delay)
     {

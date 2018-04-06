@@ -19,7 +19,10 @@ public class APIAICollene : MonoBehaviour
     public string playerTextInput;
     private ApiAiUnity apiAiUnity;
     public bool animRespond;
+    //public bool isSending;
     public Narrator n;
+    public LogSystem lS;
+    private string botName = " | Collene: ";
 
     private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings
     {
@@ -38,8 +41,10 @@ public class APIAICollene : MonoBehaviour
 
         const string ACCESS_TOKEN = "da555c520c2d4e3fbfd8763b53144ed6";
         animRespond = false;
+        //isSending = false;
         var config = new AIConfiguration(ACCESS_TOKEN, SupportedLanguage.English);
         n = GameObject.FindGameObjectWithTag("Narrator").GetComponent<Narrator>();
+        lS = FindObjectOfType<LogSystem>();
         apiAiUnity = new ApiAiUnity();
         apiAiUnity.Initialize(config);
 
@@ -58,6 +63,12 @@ public class APIAICollene : MonoBehaviour
         {
             ExecuteOnMainThread.Dequeue().Invoke();
         }
+
+        //if(lS.hasLogged)
+        //{
+        //    //isSending = false;
+        //    lS.hasLogged = false;
+        //}
     }
 
     private void RunInMainThread(Action action)
@@ -75,7 +86,7 @@ public class APIAICollene : MonoBehaviour
         var text = inputTextField.text;
         playerTextInput = text;
         Debug.Log(text);
-
+        
         AIResponse response = apiAiUnity.TextRequest(text);
 
         if (response != null)
@@ -83,6 +94,7 @@ public class APIAICollene : MonoBehaviour
             Debug.Log("Resolved query: " + response.Result.ResolvedQuery);
             var outText = JsonConvert.SerializeObject(response, jsonSettings);
             animRespond = true;
+            //isSending = true;
             Debug.Log("Result: " + outText);
 
             answerTextField.text = response.Result.Fulfillment.Speech;
@@ -93,7 +105,7 @@ public class APIAICollene : MonoBehaviour
         {
             Debug.LogError("Response is null");
         }
-
+        StartCoroutine(lS.Log(text + botName + answerTextField.text));
     }
     IEnumerator Wait(float delay)
     {

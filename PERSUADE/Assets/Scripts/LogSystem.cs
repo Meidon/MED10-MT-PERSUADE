@@ -36,16 +36,16 @@ public class LogSystem : MonoBehaviour {
     void Start () {
 
         n = FindObjectOfType<Narrator>();
-        dorian = FindObjectOfType<APIAIDorian>();
-        collene = FindObjectOfType<APIAICollene>();
-        denna = FindObjectOfType<APIAIDenna>();
-        eryn = FindObjectOfType<APIAIEryn>();
-        gavin = FindObjectOfType<APIAIGavin>();
-        keira = FindObjectOfType<APIAIKeira>();
-        keno = FindObjectOfType<APIAIKeno>();
-        shenna = FindObjectOfType<APIAIShenna>();
-        tanya = FindObjectOfType<APIAITanya>();
-        veronika = FindObjectOfType<APIAIVeronika>();
+        //dorian = FindObjectOfType<APIAIDorian>();
+        //collene = FindObjectOfType<APIAICollene>();
+        //denna = FindObjectOfType<APIAIDenna>();
+        //eryn = FindObjectOfType<APIAIEryn>();
+        //gavin = FindObjectOfType<APIAIGavin>();
+        //keira = FindObjectOfType<APIAIKeira>();
+        //keno = FindObjectOfType<APIAIKeno>();
+        //shenna = FindObjectOfType<APIAIShenna>();
+        //tanya = FindObjectOfType<APIAITanya>();
+        //veronika = FindObjectOfType<APIAIVeronika>();
         theTime = DateTime.Now.ToString("HH-mm-ss");
         theDate = DateTime.Now.ToString("MM-dd-yyyy");
         savePath = Path.GetFullPath("." + @"\TestData\Time_" + theTime + "_Date_" + theDate + ".txt");
@@ -90,95 +90,99 @@ public class LogSystem : MonoBehaviour {
                 dataLog += "\r\n" + n.DataLog[i].ToString();
         }
 
-        if(denna.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = denna.playerTextInput;
-        }
-        else if(dorian.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = dorian.playerTextInput;
-        }
-        else if (shenna.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = shenna.playerTextInput;
-        }
-        else if (eryn.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = eryn.playerTextInput;
-        }
-        else if (tanya.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = tanya.playerTextInput;
-        }
-        else if (gavin.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = gavin.playerTextInput;
-        }
-        else if (keira.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = keira.playerTextInput;
-        }
-        else if (veronika.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = veronika.playerTextInput;
-        }
-        else if (keno.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = keno.playerTextInput;
-        }
-        else if (collene.GetComponentInChildren<Canvas>().enabled)
-        {
-            playerInput = collene.playerTextInput;
-        }
+        //if(denna.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = denna.playerTextInput;
+        //}
+        //else if(dorian.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = dorian.playerTextInput;
+        //}
+        //else if (shenna.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = shenna.playerTextInput;
+        //}
+        //else if (eryn.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = eryn.playerTextInput;
+        //}
+        //else if (tanya.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = tanya.playerTextInput;
+        //}
+        //else if (gavin.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = gavin.playerTextInput;
+        //}
+        //else if (keira.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = keira.playerTextInput;
+        //}
+        //else if (veronika.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = veronika.playerTextInput;
+        //}
+        //else if (keno.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = keno.playerTextInput;
+        //}
+        //else if (collene.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    playerInput = collene.playerTextInput;
+        //}
+        //else
+        //{
+        //    playerInput = "";
+        //}
 
-        if(dorian.isSending && dorian.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (collene.IsInvoking("SendText") && collene.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (tanya.IsInvoking("SendText") && tanya.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (denna.IsInvoking("SendText") && denna.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (shenna.IsInvoking("SendText") && shenna.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (eryn.IsInvoking("SendText") && eryn.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (gavin.IsInvoking("SendText") && gavin.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (veronika.IsInvoking("SendText") && veronika.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (keira.IsInvoking("SendText") && keira.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
-        if (keno.IsInvoking("SendText") && keno.GetComponentInChildren<Canvas>().enabled)
-        {
-            StartCoroutine(Log(0.5f));
-        }
+        //if(dorian.isSending && dorian.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (collene.isSending && collene.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (tanya.isSending && tanya.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (denna.isSending && denna.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (shenna.isSending && shenna.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (eryn.isSending && eryn.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (gavin.isSending && gavin.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (veronika.isSending && veronika.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (keira.isSending && keira.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
+        //else if (keno.isSending && keno.GetComponentInChildren<Canvas>().enabled)
+        //{
+        //    StartCoroutine(Log(0.5f));
+        //}
 
     }
-    IEnumerator Log(float time)
+    public IEnumerator Log(string txt)
     {
-        appendText = "\nPlayerText: " + playerInput;
+        appendText = "\nPlayerText: " + txt;
         File.AppendAllText(savePath, appendText);
         hasLogged = true;
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(0.5f);
 
     }
     IEnumerator LogEnd(float time)
