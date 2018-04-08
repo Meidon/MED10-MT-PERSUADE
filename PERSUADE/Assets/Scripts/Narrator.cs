@@ -8,9 +8,14 @@ public class Narrator : MonoBehaviour {
     public string textInput;
     public List<string> DataLog = new List<string>();
     public List<string> Keywords = new List<string>();
-    
-	
-	void Update () {
+    public Canvas GOC;
+
+    void Start()
+    {
+        GOC.enabled = false;
+    }
+
+    void Update () {
         for(int i = 0; i <= Keywords.Count-1; i++)
         {
             if(textInput.Contains(Keywords[i].ToString()))
