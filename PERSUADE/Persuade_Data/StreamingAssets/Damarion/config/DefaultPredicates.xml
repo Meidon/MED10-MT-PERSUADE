@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <item name="name" value="un-named user" />
+  <item name="he" value="he" />
+  <item name="she" value="i am a male" />
+  <item name="it" value="I'm not an it, I'm a he!" />
+  <item name="they" value="something" />
+  <item name="age" value="35" />
+  <item name="birthday" value="41 NC" />
+  <item name="boyfriend" value="None" />
+  <item name="brother" value="No siblings" />
+  <item name="cat" value="Bell" />
+  <item name="does" value="unknown" />
+  <item name="dog" value="None" />
+  <item name="email" value="unknown" />
+  <item name="father" value="unknown" />
+  <item name="favcolor" value="Red" />
+  <item name="favmovie" value="that is not important" />
+  <item name="friend" value="Not important" />
+  <item name="fullname" value="Confidential" />
+  <item name="gender" value="Male" />
+  <item name="girlfriend" value="Juliet" />
+  <item name="has" value="has" />
+  <item name="heard" value="heard" />
+  <item name="husband" value="None" />
+  <item name="is" value="is" />
+  <item name="job" value="Hyper-elite seriously?" />
+  <item name="lastname" value="Not important" />
+  <item name="like" value="Juliet" />
+  <item name="location" value="The Party" />
+  <item name="looklike" value="A more handsome version of Orlando" />
+  <item name="memory" value="unknown" />
+  <item name="meta" value="unknown" />
+  <item name="nickname" value="unknown" />
+  <item name="middlename" value="unknown" />
+  <item name="mother" value="unknown" />
+  <item name="password" value="unknown" />
+  <item name="personality" value="Scrutiny" />
+  <item name="phone" value="unknown" />
+  <item name="sign" value="unknown" />
+  <item name="sister" value="unknown" />
+  <item name="them" value="unknown" />
+  <item name="thought" value="unknown" />
+  <item name="want" value="unknown" />
+  <item name="we" value="unknown" />
+</root>
