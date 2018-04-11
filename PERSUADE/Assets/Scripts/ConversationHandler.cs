@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConversationHandler : MonoBehaviour {
 
@@ -49,6 +50,7 @@ public class ConversationHandler : MonoBehaviour {
             for (int i = 0; i < ChatbotCanvas.Count; i++)
             {
                 ChatbotCanvas[i].GetComponentInChildren<Canvas>().enabled = false;
+                ChatbotCanvas[i].GetComponentInChildren<InputField>().DeactivateInputField();
             }
 
         }
@@ -89,6 +91,7 @@ public class ConversationHandler : MonoBehaviour {
                     isRoaming = false;
                     isUIEnabled = true;
                     tempC.enabled = true;
+                    tempC.GetComponentInChildren<InputField>().Select();
                     
                 }
             }
