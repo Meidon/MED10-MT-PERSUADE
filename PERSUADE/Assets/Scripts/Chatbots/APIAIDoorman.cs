@@ -16,6 +16,7 @@ public class APIAIDoorman : MonoBehaviour
 
     public Text answerTextField;
     public Text inputTextField;
+    public InputField playerField;
     private ApiAiUnity apiAiUnity1;
     public bool animRespond;
 
@@ -61,6 +62,7 @@ public class APIAIDoorman : MonoBehaviour
                 Debug.Log("Resolved query: " + response.Result.ResolvedQuery);
                 var outText = JsonConvert.SerializeObject(response, jsonSettings);
                 animRespond = true;
+                playerField.ActivateInputField();
                 Debug.Log("Result: " + outText);
 
                 answerTextField.text = response.Result.Fulfillment.Speech;

@@ -17,6 +17,7 @@ public class APIAITanya : MonoBehaviour
     public Text answerTextField;
     public Text inputTextField;
     public string playerTextInput;
+    public InputField playerField;
     private ApiAiUnity apiAiUnity;
     public bool animRespond;
     //public bool isSending;
@@ -88,6 +89,7 @@ public class APIAITanya : MonoBehaviour
             Debug.Log("Resolved query: " + response.Result.ResolvedQuery);
             var outText = JsonConvert.SerializeObject(response, jsonSettings);
             animRespond = true;
+            playerField.ActivateInputField();
             //isSending = true;
             Debug.Log("Result: " + outText);
 

@@ -21,7 +21,7 @@ public class logBookUI : MonoBehaviour
 
     void Start()
     {
-
+        
         canvasElements.AddRange(logBook.GetComponentsInChildren<CanvasRenderer>());
         for (int i = 0; i < canvasElements.Count - 1; i++)
         {
@@ -64,14 +64,14 @@ public class logBookUI : MonoBehaviour
             canvasElements[0].gameObject.SetActive(!canvasElements[0].gameObject.activeInHierarchy);
             canvasElements[1].gameObject.SetActive(!canvasElements[1].gameObject.activeInHierarchy);
             isLogBook = !isLogBook;
-            cHandler.lockCursor = !cHandler.lockCursor;
+            //cHandler.lockCursor = !cHandler.lockCursor;
         }
 
         if (isLogBook)
         {
 
-            cHandler.playerControl.input = new Vector2(0, 0);
-            cHandler.PlayerController.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = false;
+            //cHandler.playerControl.input = new Vector2(0, 0);
+            //cHandler.PlayerController.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = false;
 
             //if (Input.GetAxis("Mouse ScrollWheel") >= 0.05 && current <= max) {
             //    current += 1;

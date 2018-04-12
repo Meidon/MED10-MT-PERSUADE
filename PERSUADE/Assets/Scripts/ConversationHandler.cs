@@ -14,6 +14,7 @@ public class ConversationHandler : MonoBehaviour {
     public bool lockCursor = true;
     public Canvas childCE;
     public Canvas childCQ;
+    public Canvas Tutorial;
     public List<GameObject> ChatbotCanvas = new List<GameObject>();
     public Invector.CharacterController.vThirdPersonController playerControl;
 
@@ -28,6 +29,15 @@ public class ConversationHandler : MonoBehaviour {
 	
 	void Update () {
 		
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            lockCursor = !lockCursor;
+        }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            Tutorial.enabled = !Tutorial.enabled;
+        }
+
         if(isRoaming)
         {
             isUIEnabled = false;
@@ -101,5 +111,6 @@ public class ConversationHandler : MonoBehaviour {
         Cursor.lockState = lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !lockCursor;
     }
+
 
 }
