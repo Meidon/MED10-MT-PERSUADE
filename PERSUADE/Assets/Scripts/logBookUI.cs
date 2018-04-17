@@ -18,6 +18,7 @@ public class logBookUI : MonoBehaviour
     public ConversationHandler cHandler;
     public bool isLogBook = false;
     private Vector3 mousePos;
+    public Canvas PuzzleCanvas;
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class logBookUI : MonoBehaviour
         cHandler = FindObjectOfType<ConversationHandler>();
         n = FindObjectOfType<Narrator>();
         canvasElements[1].gameObject.SetActive(false);
+        StartCoroutine(DeactivationDelay());
         min = 0;
         max = selectiveArray.Count;
     }
@@ -63,6 +65,7 @@ public class logBookUI : MonoBehaviour
         {
             canvasElements[0].gameObject.SetActive(!canvasElements[0].gameObject.activeInHierarchy);
             canvasElements[1].gameObject.SetActive(!canvasElements[1].gameObject.activeInHierarchy);
+            PuzzleCanvas.gameObject.SetActive(!PuzzleCanvas.gameObject.activeInHierarchy);
             isLogBook = !isLogBook;
             //cHandler.lockCursor = !cHandler.lockCursor;
         }
@@ -166,5 +169,11 @@ public class logBookUI : MonoBehaviour
             }
 
         }
+    }
+
+    IEnumerator DeactivationDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        PuzzleCanvas.gameObject.SetActive(false);
     }
 }

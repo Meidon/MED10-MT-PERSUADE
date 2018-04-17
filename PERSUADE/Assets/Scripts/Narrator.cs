@@ -16,7 +16,7 @@ public class Narrator : MonoBehaviour {
     }
 
     void Update () {
-        for(int i = 0; i <= Keywords.Count-1; i++)
+        for(int i = 0; i < Keywords.Count; i++)
         {
             if(textInput.Contains(Keywords[i].ToString()))
             {
