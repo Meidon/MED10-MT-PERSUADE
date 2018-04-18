@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class PuzzlePieceCheck : MonoBehaviour {
 
     public string keyword;
+    public GameObject PuzzleNotif;
     private Narrator n;
 
 	void Start () {
 
         n = FindObjectOfType<Narrator>();
+        PuzzleNotif = GameObject.FindGameObjectWithTag("PopupPanel");
+        PuzzleNotif.GetComponentInChildren<UIController>().Hide();
         if(keyword == "")
         {
             keyword = "No Keyword Found";
@@ -25,8 +28,16 @@ public class PuzzlePieceCheck : MonoBehaviour {
             if (n.DataLog[i].Contains(keyword) && this.GetComponent<Image>().enabled == false)
             {
                 this.GetComponent<Image>().enabled = true;
+                StartCoroutine(Popup(2));
             }
         }
 
 	}
+
+    IEnumerator Popup(float popupTime)
+    {
+        PuzzleNotif.GetComponentInChildren<UIController>().Show();
+        yield return new WaitForSeconds(popupTime);
+        PuzzleNotif.GetComponentInChildren<UIController>().Hide();
+    }
 }

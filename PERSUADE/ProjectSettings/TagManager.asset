@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chatbot
   - Narrator
+  - PopupPanel
   layers:
   - Default
   - TransparentFX
