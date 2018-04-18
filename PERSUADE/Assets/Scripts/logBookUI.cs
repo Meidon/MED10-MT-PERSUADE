@@ -65,7 +65,7 @@ public class logBookUI : MonoBehaviour
         {
             canvasElements[0].gameObject.SetActive(!canvasElements[0].gameObject.activeInHierarchy);
             canvasElements[1].gameObject.SetActive(!canvasElements[1].gameObject.activeInHierarchy);
-            PuzzleCanvas.gameObject.SetActive(!PuzzleCanvas.gameObject.activeInHierarchy);
+            PuzzleCanvas.enabled = !PuzzleCanvas.enabled;
             isLogBook = !isLogBook;
             //cHandler.lockCursor = !cHandler.lockCursor;
         }
@@ -174,6 +174,6 @@ public class logBookUI : MonoBehaviour
     IEnumerator DeactivationDelay()
     {
         yield return new WaitForSeconds(0.5f);
-        PuzzleCanvas.gameObject.SetActive(false);
+        PuzzleCanvas.enabled = false;
     }
 }
