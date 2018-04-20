@@ -18,6 +18,7 @@ public class APIAIDoorman : MonoBehaviour
     public Text inputTextField;
     public InputField playerField;
     private ApiAiUnity apiAiUnity1;
+    public int VoiceType;
     public bool animRespond;
 
     private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings
@@ -82,7 +83,7 @@ public class APIAIDoorman : MonoBehaviour
 
     IEnumerator Wait(float delay)
     {
-        GetComponent<WindowsVoice>().speak(answerTextField.text, 1);
+        GetComponent<TestVoice>().Speak(answerTextField.text, VoiceType);
         yield return new WaitForSeconds(delay);
 
         animRespond = false;

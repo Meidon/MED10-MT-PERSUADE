@@ -24,6 +24,7 @@ public class APIAIDorian : MonoBehaviour
     public Narrator n;
     public LogSystem lS;
     private string botName = " | Dorian: ";
+    public int VoiceType;
 
     private readonly JsonSerializerSettings jsonSettings = new JsonSerializerSettings
     {
@@ -114,7 +115,7 @@ public class APIAIDorian : MonoBehaviour
     }
     IEnumerator Wait(float delay)
     {
-        GetComponent<WindowsVoice>().speak(answerTextField.text,1);
+        GetComponent<TestVoice>().Speak(answerTextField.text, VoiceType);
         yield return new WaitForSeconds(delay);
 
         animRespond = false;

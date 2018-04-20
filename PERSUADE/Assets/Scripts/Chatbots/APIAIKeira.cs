@@ -19,6 +19,7 @@ public class APIAIKeira : MonoBehaviour
     public string playerTextInput;
     public InputField playerField;
     private ApiAiUnity apiAiUnity;
+    public int VoiceType;
     public bool animRespond;
     //public bool isSending;
     public Narrator n;
@@ -105,7 +106,7 @@ public class APIAIKeira : MonoBehaviour
     }
     IEnumerator Wait(float delay)
     {
-        GetComponent<WindowsVoice>().speak(answerTextField.text, 1);
+        GetComponent<TestVoice>().Speak(answerTextField.text, VoiceType);
         yield return new WaitForSeconds(delay);
 
         animRespond = false;
