@@ -82,6 +82,7 @@ public class APIAIDoorman : MonoBehaviour
 
     IEnumerator Wait(float delay)
     {
+        GetComponent<WindowsVoice>().speak(answerTextField.text, 1);
         yield return new WaitForSeconds(delay);
 
         animRespond = false;

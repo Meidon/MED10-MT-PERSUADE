@@ -63,41 +63,24 @@ public class logBookUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            canvasElements[0].gameObject.SetActive(!canvasElements[0].gameObject.activeInHierarchy);
-            canvasElements[1].gameObject.SetActive(!canvasElements[1].gameObject.activeInHierarchy);
-            PuzzleCanvas.enabled = !PuzzleCanvas.enabled;
             isLogBook = !isLogBook;
-            //cHandler.lockCursor = !cHandler.lockCursor;
         }
 
         if (isLogBook)
         {
+            canvasElements[0].gameObject.SetActive(false);
+            canvasElements[1].gameObject.SetActive(true);
+            PuzzleCanvas.enabled = true;
 
-            //cHandler.playerControl.input = new Vector2(0, 0);
-            //cHandler.PlayerController.GetComponent<Invector.CharacterController.vThirdPersonInput>().enabled = false;
-
-            //if (Input.GetAxis("Mouse ScrollWheel") >= 0.05 && current <= max) {
-            //    current += 1;
-            //    switchSelection();
-
-            //}
-            //else if(current > max)
-            //{
-            //    current = min;
-            //    switchSelection();
-            //}
-
-            //if(Input.GetAxis("Mouse ScrollWheel") <= -0.05 && current >= min)
-            //{
-            //    current -= 1;
-            //    switchSelection();
-            //}
-            //else if(current < min)
-            //{
-            //    current = max-1;
-            //    switchSelection();
-            //}
-
+        } else if(!isLogBook)
+        {
+            canvasElements[0].gameObject.SetActive(true);
+            canvasElements[1].gameObject.SetActive(false);
+            PuzzleCanvas.enabled = false;
+            for (int i = 0; i < clickableArray.Count; i++)
+            {
+                clickableArray[i].gameObject.SetActive(false);
+            }
         }
 
 
@@ -126,28 +109,6 @@ public class logBookUI : MonoBehaviour
         }
 
     }
-
-    //void switchSelection()
-    //{
-    //    for (int i = 0; i < selectiveArray.Count; i++)
-    //    {
-    //        if(i != current)
-    //        {
-    //            selectiveArray[i].gameObject.SetActive(false);
-    //        }
-    //        else if(i == current)
-    //        {
-    //            selectiveArray[i].gameObject.SetActive(true);
-    //        }
-
-    //    }
-    //}
-
-    //public void setCurrent(int val)
-    //{
-    //    current = val;
-    //    switchSelection();
-    //}
 
     public void clickCurrent(int val)
     {

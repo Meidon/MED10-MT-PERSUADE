@@ -8,10 +8,12 @@ public class PuzzlePieceCheck : MonoBehaviour {
     public string keyword;
     public GameObject PuzzleNotif;
     private Narrator n;
+    private LogSystem LS;
 
 	void Start () {
 
         n = FindObjectOfType<Narrator>();
+        LS = FindObjectOfType<LogSystem>();
         PuzzleNotif = GameObject.FindGameObjectWithTag("PopupPanel");
         PuzzleNotif.GetComponentInChildren<UIController>().Hide();
         if(keyword == "")
@@ -28,6 +30,7 @@ public class PuzzlePieceCheck : MonoBehaviour {
             if (n.DataLog[i].Contains(keyword) && this.GetComponent<Image>().enabled == false)
             {
                 this.GetComponent<Image>().enabled = true;
+                LS.num += 1;
                 StartCoroutine(Popup(2));
             }
         }
