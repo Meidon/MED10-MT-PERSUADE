@@ -19,6 +19,9 @@ public class LogSystem : MonoBehaviour {
     private float minute;
     private float hour;
     public bool hasLogged;
+    private bool end_running = false;
+    public TMPro.TextMeshProUGUI Completion;
+    private float closeCountdown = 5f;
 
     void Start () {
 
@@ -57,16 +60,23 @@ public class LogSystem : MonoBehaviour {
         if(minute == 30)
         {
             n.GOC.enabled = true;
+            Completion.SetText("Completion: <#0fffff>"+num/144f*100+ "%</color>\nApp will terminate in: <#0fffff>" + (int)closeCountdown+"</color> seconds.");
         }
 
-        if(minute == 30 && timePlayed >= 10)
+        if(n.GOC.enabled == true)
+        {
+            closeCountdown -= 1 * Time.deltaTime;
+        }
+
+        if(minute == 30 && timePlayed >= 5f)
         {
             end = true;
         }
 
         if (end)
         {
-            StartCoroutine(LogEnd(0.5f));
+            if(!end_running)
+                StartCoroutine(LogEnd(0.5f));
             end = false;
         }
 
@@ -86,6 +96,7 @@ public class LogSystem : MonoBehaviour {
     }
     IEnumerator LogEnd(float time)
     {
+        end_running = true;
         yield return new WaitForSeconds(time);
         appendText = "\r\n" + (int)hour + "," + (int)minute + "," + (int)timePlayed + "\r\n Progress: "+num/144f*100+"%";
         File.AppendAllText(savePath, appendText);

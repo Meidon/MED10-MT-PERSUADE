@@ -1,10 +1,4 @@
-﻿// **************************************************************************
-// Unity Text To Speech V2 ZJP. Voice Manager
-// **************************************************************************
-// DO NOT FORGET TO CHANGE THE EXECUTION ORDER OF THIS CLASSE/SCRIPT ( - 100)
-// **************************************************************************
-
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using Microsoft.Win32;
 using System.Runtime.InteropServices;
@@ -59,39 +53,29 @@ public class VoiceManager : MonoBehaviour
 	const int SPF_NLP_SPEAK_PUNC  = 64;
 	const int SPF_PARSE_SAPI  = 128;
 	const int SPF_PARSE_SSML  = 256;
-	// CUSTOM VOICE FLAG !!! ******************************************************************************************************************
-	
-	// Use this for initialization
+
 	void Start()
 	{
-		// Info (64Bits OS):
-		// Executing Windows\sysWOW64\speech\SpeechUX\SAPI.cpl brings up a Window that displays (!) all of the 32 bit Voices
-		// and the current single 64 bit Voice "Anna".
-		
-		// HKEY_LOCAL_MACHINE\\SOFTWARE\Microsoft\Speech\\Voices\\Tokens\\xxxVOICExxxINSTALLEDxxx\\Attributes >>> (Name)
+
 		const string speechTokens = "Software\\Microsoft\\Speech\\Voices\\Tokens";
 		
 		using (RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(speechTokens))
 		{
-			VoiceNumber = registryKey.SubKeyCount; // key found not mean true voice number !!!
+			VoiceNumber = registryKey.SubKeyCount;
 			VoiceNames  = new string[VoiceNumber + 1];
 			VoiceNumber = 0;
 			foreach (var regKeyFound in registryKey.GetSubKeyNames())
 			{
-				//Debug.Log(regKeyFound);
 				string finalKey = "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Speech\\Voices\\Tokens\\" + regKeyFound + "\\Attributes";
-				//Debug.Log(finalKey);
 				string gotchaVoiceName = "";
 				gotchaVoiceName = (string)Registry.GetValue (finalKey, "Name", "");
 				if (gotchaVoiceName != "")
 				{
-					//Debug.Log("Langage Name = " + gotchaVoiceName);
-					VoiceNumber++; // increase the real voice number..
+					VoiceNumber++;
 					VoiceNames[VoiceNumber ] = gotchaVoiceName;
 				}
 			}
 		}
-		// return 0 >>> Init ok
 		if (VoiceNumber != 0)
 		{
 			VoiceInit =  Uni_Voice_Init();
@@ -136,6 +120,3 @@ public class VoiceManager : MonoBehaviour
 		Uni_Voice_Close();
 	}
 }
-// **************************************************************************
-// Unity Text To Speech V2 ZJP. Voice Manager
-// **************************************************************************

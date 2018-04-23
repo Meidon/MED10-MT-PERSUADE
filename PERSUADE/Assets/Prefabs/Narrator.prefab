@@ -20,6 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4296088772220474}
   - component: {fileID: 114086680839201468}
+  - component: {fileID: 114235645732916096}
+  - component: {fileID: 114734553668363890}
+  - component: {fileID: 114540563770556152}
+  - component: {fileID: 114841865329997820}
   m_Layer: 0
   m_Name: Narrator
   m_TagString: Narrator
@@ -51,5 +55,260 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a77ca543d89fe94ebf21f232ba678f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exampleText: {fileID: 0}
-  robotOutput: {fileID: 0}
+  textInput: 
+  DataLog: []
+  Keywords:
+  - I may have blackmailed Shenna, but it was necessary.
+  - Ah yes. My research into behaviour adjustment. Fascinating, but beyond your understanding.
+  - My past is not something I wish to discuss.
+  - Let me tell you one thing. Keep your hands of Denna.
+  - You should have seen it when I humiliated Keira. She was taught a lesson she'll
+    remember.
+  - My research involves state of the art technology, nothing more.
+  - Denna. A bright light among these dullards. I admire her charm and intellect.
+  - I suppose it might be called love. The attraction is certainly there.
+  - Keno served in the military. A waste of time, when one has the money to make actual
+    change if you ask me.
+  - An unfortunate consequence, but Judith poked her nose where it did not belong.
+  - Hah. If I told you a fraction of what I know, you could bring down OBXILUS. But
+    why would I destroy my own livelyhood?
+  - Denna mentioned that she and Keira had a past. An old friendship I believe. I
+    guess Keira was too cowardly to ever move past that, and now, it is too late.
+  - Keno has PTSD? That makes a surprising amount of sense.
+  - Denna once outed another millionaire's secrets for the 'good of the people'. I
+    don't think she did as much good as she believes.
+  - I wonder if Denna might be up to something with our dear Dorian. I don't trust
+    her. that's for sure.
+  - The police detective Gavin Madigan is up to something. I'm not sure if I'm entirely
+    safe with him around.
+  - Sometimes I use the firm's money for charity events, and I admit, I might not
+    always go through the correct paperwork. But someone must help the unfortunate.
+  - Something that is not a secret is my rivalry with Tanya. We like to go toe-to-toe
+    when it comes to business decisions.
+  - '... I did not wish to speak of this, but truthfully, I''m dying. I need to leave
+    something behind, something that made the world a better place.'
+  - I've heard rumor that Tanya is abusing her position as a director of OBXILUS.
+    Why, I do not know.
+  - I do believe that Dorian blackmailed Shenna. Probably has something to do with
+    his research.
+  - Hm. I believe Dorian's research involves behavioural modification. Brainwashing
+    is the layman's term.
+  - Tanya is likely using illegal business gains to fund other projects. Shady projects
+    I bet.
+  - I know the past of most people here, but not Dorian. Someone knows how to clean
+    up after themselves...
+  - Shenna meets with foreign clients, but their business is not mentioned in any
+    OBXILUS record. At least, not in any I know of.
+  - I'm not quite sure, but I think Keno's time in the military changed him. I'm afraid
+    both of what could have made him erratic, and of what might come of it.
+  - Collene is funnelling money out of the company. To who, I don't know, but those
+    quantities of money could cause a lot of trouble.
+  - I know the directors of OBXILUS is hiding something, and I'm going to find out
+    what it is.
+  - I don't know if Keno could be suffering from PTSD. I think there is something
+    more to it, but I don't have time to investigate that.
+  - It's nothing. Almost nothing, but sure, Dorian blackmailed me, claiming that he
+    could bring down OBXILUS if I didn't transfer ... I think I've said enough about
+    that.
+  - Dorian's science is dangerous. To know about it as well as performing it I imagine.
+  - Denna is deceiving Dorian to infiltrate OBXILUS business. I won't let her get
+    away with her tricks, you just wait and see. I've sacrificed too much for this
+    firm already.
+  - Denna is untrustworthy for anyone who expects to keep their personal information
+    private. She's a notorious cyber criminal and hacker after all.
+  - Eryn acts like she has some secret mission or something. She's definitely up to
+    something.
+  - Dorian's research uses unlawful technology, but nothing the police would care
+    about.
+  - It appears as if Eryn is interrogating the other guests.. I can help to wonder
+    what she is up to.
+  - Sure, I have journalists on a payroll. All high class citizens need to divert
+    attention occasionally. Anything else would be foolish.
+  - I don't intend to talk to you about that. No matter what you say.
+  - Collene, as empty as she is, is just blowing money left and right. I don't think
+    even she has an idea of what she's doing anymore.
+  - There are secrets in this room that must never see the light. The outcome could
+    be catastrophic.
+  - The police and their investigation has no place here, nor anywhere near OBXILUS.
+  - I fear Tanya is controlling Veronika through illegal means, and abusing her to
+    cover up whatever OBXILUS hides away.
+  - Dorian did something to Shenna. Blackmail? Possibly.
+  - Whatever Dorian is doing, it is dangerous. It's come crashing down if he isn't
+    stopped.
+  - Hm. Like any upper class it is to be expected that Dorian had a gilded childhood.
+  - Hm. I've heard rumours that Denna tricked a millionaire.
+  - Denna might be untrustworthy on the grounds of her being a hacker, but if anyone
+    could reveal Dorian's darkness, I bet it's her.
+  - I don't do gossip.
+  - Dorian made a mistake when he tried to hide away the fact that he uses illegal
+    technology. Mark my words, he will pay for that mistake.
+  - Hm. I suppose, that Shenna is rumoured to make strange requests of her clients.
+    And to offer them unorthodox gifts.
+  - I served in the military, yes. Like any patriotic citizen should, regardless of
+    stature. It made me so much stronger.
+  - I pains me that it is so obvious that Collene is up to something, but she seems
+    to be protected on account of her good relations with the police.
+  - I know OBXILUS is hiding something, and I'm determined to figure out what it is.
+  - Talking of friends, I know that Denna and Keira were such. That is the reason
+    Eryn hired the both of them.
+  - I encountered Gavin during his prior investigation. Let's just say it did not
+    go without complications, even if I had done nothing that warranted suspicion.
+  - I do not suffer from PTSD. I'm not insane. Leave me, this instant.
+  - I do believe Dorian's research has to do with some form of advertisement. It's
+    not something I care deeply about, but I wish him the best.
+  - I don't know if Denna is trustworthy as such, but I would just love to hire her
+    for OBXILUS. Her skills put to use in cyber security and we'd never have a breach
+    of security again.
+  - Ah, I was in such a good mood this evening, but you see Dorian, Denna and Keira
+    over there? I tire so with their silly love triangle. Be done with it, if you
+    know what I mean.
+  - It's a little cute how Eryn is called well... Eryn now. I used to know her under
+    a different name, but I'm curious as to why she has returned here.
+  - I can tell you one thing, and that is that I'm done with my so called rivalry
+    with Collene. It is simply so draining.
+  - Is there any worse control than how the rich lead the police into protecting their
+    every depravity? I would think not.
+  - I know Dorian blackmails people. I know, but Denna doesn't. If she did, she wouldn't
+    want anything to do with him.
+  - The one called Tanya is funding Dorian's research. His research that strives to
+    deprive the lower classes of even more of their rights.
+  - I don't believe Dorian ever suffered any hardships.
+  - My guess is that Collene holds these parties to divert attention from some dark
+    secret.
+  - Collene has some secret that she is desperate to keep. Why else waste time on
+    elaborate parties such as this one?
+  - '... Dorian is a horrible person. I had hardly arrived at the party before he..
+    he humiliated me. Right there, in front of everyone.'
+  - Dorian doesn't keep it a secret that he admires Denna's intellect, but the truth
+    is that he has no idea. He doesn't understand how special she is.
+  - I work for Eryn, but ... Nothing. Go bother someone else.
+  - Shenna pays corrupt journalists to draw attention away from her and OBXILUS whenever
+    there is a scandal. Hiding the truth from the people. Unforgivable.
+  - Dorian may claim that he likes Denna, but ... She would never do anything with
+    someone like him. No. She absolutely wouldn't.
+  - I ... I know and fear that Dorian had a hand in the murder of another hacker.
+    One named Judith. She was on the verge of figuring out his crimes, I'm sure of
+    it.
+  - I've known Denna for so long. We went to the same college, and ... Well. Dorian
+    has no right to interfere! I mean... Nevermind.
+  - That Gavin fellow is likely here to assure that the upper crusts can feel safe
+    from the unwelcome.. the ... I hate how he choose to serve those who oppress us
+    all.
+  - I personally think that Collene is using the parties as a cover up for something.
+  - Hm. I know Shenna bought some drugs off of a client, but I don't know what kind
+    or what for. But I suppose rich people are free to do that, provided they are
+    willing to pay the price when the police shows up.
+  - Hmm. Gossip, eh? Well, take a word of warning. Stay away from Keno's past. He
+    was in the military and I think he got PTSD from it. He doesn't take kindly to
+    people asking question about it however.
+  - What? No, Dorian would never. Or well, he might, but then Keira would have told
+    me about it.
+  - Heh. I consider myself quite the genius, and I'm glad Dorian agrees. It's very
+    nice finally having someone appreciate it, you know.
+  - I don't know if I would say that I love Dorian, but he's certainly got me charmed.
+    He's just so much more.
+  - Hm, I think Shenna uses company funds on her private meetings.
+  - Keno is quite the soldier. Almost to the point where it is scary.
+  - I .. well... might be hired to uncover the OBXILUS secrets. Please don't tell
+    anyone. Especially not Eryn, she would tear my head off if she knew I revealed
+    it.
+  - Keira is an old friend of mine. We met in college I think. Blast, that feels like
+    ages ago.
+  - I do not discuss the doings of my friends with strangers.
+  - His childhood was a mess. He lost two siblings in an accident, his parents had
+    to resort to crime to scrape by, and his family's home was seized by the very
+    firm he now works for.
+  - Shenna might have a problem in that regard, but that is no concern of yours.
+  - Don't take anything offered by Shenna. In the virtual or in the real.
+  - Hm. I see no proof of anything illegal. Not anything that would hold up in court.
+  - Hm. If I had to guess, I'd say that Eryn is a corporate spy, here to sniff at
+    the competition. OBXILUS has its share of rivals.
+  - The way he carries himself speaks of military training. And the nervous ticks
+    might reveal PTSD.
+  - Gavin is a good cop, but naive. He's intentions are misguided by the folly of
+    youth.
+  - It makes sense that Keno suffers from PTSD. It is quite common in people who served
+    on other planets.
+  - Collene is ill. Don't ask me how I know, but she doesn't have a lot of time left.
+  - I don't know how exactly just yet, but I know something fishy is going on with
+    Dorian's research.
+  - Collene's erratic actions and sporadic parties and hurting the people who work
+    for her. I don't know if it's supposed to be a cover up of some kind.
+  - Shenna bought a poison disguised as a drug purchase. Sure, drugs are illegal,
+    but she can easily enough get away with that. Now poison is an entirely different
+    matter.
+  - This whole party is rife with secrets that I intend to uncover.
+  - Even as I wish I could take down Dorian on the legality of the technology he uses
+    for his research, he's covered his bases, and per international laws and loopholes,
+    there is nothing there..
+  - I bet Eryn is here for the same reason as I.
+  - I'm absolutely positive Dorian had a hand in the murder of the hacker Judith.
+    She was trying to uncover his secrets, and she paid the price. But so will he,
+    mark my words.
+  - The truth is that I'm here to fight the corruption and evil that spreads through
+    the upper classes of society. Something easier done from the inside.
+  GOC: {fileID: 0}
+--- !u!114 &114235645732916096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123588365484548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d429f1d21f5715e47ac49c862ed5d791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 0}
+  num: 0
+  end: 0
+  timePlayed: 0
+  dataLog: 
+  hasLogged: 0
+  Completion: {fileID: 0}
+--- !u!114 &114540563770556152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123588365484548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d429f1d21f5715e47ac49c862ed5d791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  n: {fileID: 0}
+  num: 0
+  end: 0
+  timePlayed: 0
+  dataLog: 
+  hasLogged: 0
+  Completion: {fileID: 0}
+--- !u!114 &114734553668363890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123588365484548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19de15f75ea46f446a03994c323f091b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceInit: 0
+  VoiceNumber: 0
+  VoiceNames: []
+--- !u!114 &114841865329997820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123588365484548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19de15f75ea46f446a03994c323f091b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VoiceInit: 0
+  VoiceNumber: 0
+  VoiceNames: []
